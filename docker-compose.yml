@@ -10,5 +10,15 @@ services:
       POSTGRES_DB: nest
     networks:
       - yprawirocode
+  test-db:
+    image: postgres:13
+    ports:
+      - 5435:5432
+    environment:
+      POSTGRES_USERS: postgres
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: nest
+    networks:
+      - yprawirocode
 networks:
   yprawirocode:
