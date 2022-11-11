@@ -7,6 +7,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "prisma:dev:deploy": "npx prisma migrate deploy",
+    "prisma:migrate:dev": "npx prisma migrate deploy",
     "db:dev:rm": "sudo docker-compose rm -s -f -v dev-db",
     "db:dev:up": "sudo docker-compose up -d dev-db",
     "db:dev:restart": "npm run db:dev:rm && npm run db:dev:up && npm run prisma:dev:deploy",
