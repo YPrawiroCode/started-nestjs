@@ -5,6 +5,7 @@ import { User } from './user.entity';
 
 @Injectable()
 export class UsersService {
+  static find: () => Promise<User[]>;
   constructor(@InjectRepository(User) private repo: Repository<User>) {}
 
   create(email: string, password: string) {
