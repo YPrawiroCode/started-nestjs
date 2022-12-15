@@ -18,8 +18,13 @@ export class ReportDTO {
   model: string;
   @Expose()
   mileage: number;
+  @Expose()
+  approved: boolean;
 
-  @Transform(({ obj }) => obj.user.id)
+  @Transform(({ obj }) => {
+    console.log('🚀 ~ file: report.dto.ts:25 ~ ReportDTO ~ obj', obj);
+    return obj.user.id;
+  })
   @Expose()
   userId: number;
 }
